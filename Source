@@ -1,3 +1,4 @@
+
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -647,9 +648,11 @@ function OrionLib:MakeWindow(WindowConfig)
 	AddConnection(CloseBtn.MouseButton1Up, function()
 		MainWindow.Visible = false
 		UIHidden = true
+		
 		OrionLib:MakeNotification({
 			Name = "Hub Fechado",
-			Content = "Clique no Icon para abri-lo",
+			Content = "Execute o Script novamente para abri-lo",
+			Image = "rbxassetid://130774789202390",
 			Time = 5
 		})
 		WindowConfig.CloseCallback()
